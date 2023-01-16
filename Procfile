@@ -1,0 +1,1 @@
+web: gunicorn The_Spark_Foundation.wsgi --log-file
