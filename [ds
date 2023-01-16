@@ -1,0 +1,58 @@
+[1mdiff --git a/donate/__pycache__/urls.cpython-310.pyc b/donate/__pycache__/urls.cpython-310.pyc[m
+[1mindex 2c9a00c..f6b7e3f 100644[m
+Binary files a/donate/__pycache__/urls.cpython-310.pyc and b/donate/__pycache__/urls.cpython-310.pyc differ
+[1mdiff --git a/donate/__pycache__/views.cpython-310.pyc b/donate/__pycache__/views.cpython-310.pyc[m
+[1mindex ee8bef2..800eab7 100644[m
+Binary files a/donate/__pycache__/views.cpython-310.pyc and b/donate/__pycache__/views.cpython-310.pyc differ
+[1mdiff --git a/donate/urls.py b/donate/urls.py[m
+[1mindex 8be463b..7156c98 100644[m
+[1m--- a/donate/urls.py[m
+[1m+++ b/donate/urls.py[m
+[36m@@ -1,7 +1,8 @@[m
+ [m
+ from django.urls import path [m
+[31m-from .views import index[m
+[32m+[m[32mfrom .views import index , contact[m
+ [m
+ urlpatterns = [[m
+[31m-    path('' , index , name = "index" )[m
+[32m+[m[32m    path('' , index , name = "index" ) ,[m
+[32m+[m[32m    path('contact' , contact , name= "contact" )[m
+ ][m
+[1mdiff --git a/donate/views.py b/donate/views.py[m
+[1mindex 7f6a081..3078ae0 100644[m
+[1m--- a/donate/views.py[m
+[1m+++ b/donate/views.py[m
+[36m@@ -3,3 +3,5 @@[m [mfrom django.shortcuts import render[m
+ # Create your views here.[m
+ def index(request):[m
+     return render(request , 'index.html')[m
+[32m+[m[32mdef contact(request):[m
+[32m+[m[32m    return render(request , "contact.html")[m
+\ No newline at end of file[m
+[1mdiff --git a/templates/index.html b/templates/index.html[m
+[1mindex 70573c0..148dd8b 100644[m
+[1m--- a/templates/index.html[m
+[1m+++ b/templates/index.html[m
+[36m@@ -14,7 +14,7 @@[m
+         }[m
+         body[m
+         {[m
+[31m-            background-image:url({% static 'images/background.jpg' %});[m
+[32m+[m[32m            background-image:url("{% static 'images/background.jpg' %}");[m
+         }[m
+ [m
+         * {box-sizing: border-box;}[m
+[36m@@ -95,9 +95,9 @@[m
+         <td style="color:red;font-size:50px;font-weight:bold;text-shadow:2px 2px 2px white">Donation Page</td>[m
+         <td width="10%" align="center"> <a href="index">Home</a></td>[m
+         <td width="10%" align="center"> <a href="about">About</a></td>[m
+[31m-        <td width="10%" align="center"> <a href="projectreg">Contact</a></td>[m
+[31m-        <td width="10%" align="center"> <a href="projectlist">Gallery</a></td>[m
+[31m-        <td width="10%" align="center"> <a href="admin">Admin</a></td>[m
+[32m+[m[32m        <td width="10%" align="center"> <a href="contact">Contact</a></td>[m
+[32m+[m[32m        <!-- <td width="10%" align="center"> <a href="projectlist">Gallery</a></td> -->[m
+[32m+[m[32m        <!-- <td width="10%" align="center"> <a href="admin">Admin</a></td> -->[m
+ [m
+     </tr>[m
+ </table><br><br><br><br><br><br><br>[m

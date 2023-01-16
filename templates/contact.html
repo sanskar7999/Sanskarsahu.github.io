@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Contact Form 08</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<style>
+	body {
+		background-image:url("{% static 'images/background.jpg' %}");
+	}
+</style>
+
+<body>
+	<table border="0" width="100%" height="10%"
+		style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;border-bottom:1px dotted white;box-shadow:1px 1px 5px white;">
+		<tr>
+
+			<td style="color:red;font-size:50px;font-weight:bold;text-shadow:2px 2px 2px white">Donation Page</td>
+			<td width="10%" align="center"> <a href="/">Home</a></td>
+			<td width="10%" align="center"> <a href="/">About</a></td>
+			<td width="10%" align="center"> <a href="/">Contact</a></td>
+			<!-- <td width="10%" align="center"> <a href="projectlist">Gallery</a></td> -->
+			<!-- <td width="10%" align="center"> <a href="admin">Admin</a></td> -->
+
+		</tr>
+	</table><br><br><br><br><br><br><br>
+	<form action="" style="color: red; text-align: center;">
+		<b>Name</b><input type="name" name="name" id=""><br>
+		<b>Email</b><input type="email" name="email" id=""><br>
+		<b>Phone</b><input type="number" name="number" id=""><br><b>Enter your message</b> <br>
+		<textarea name="" id="" cols="30" rows="10">Enter text here</textarea><br>
+		<button type="submit"><b>submit</b></button>
+	</form>
+
+
+</body>
+
+</html>
